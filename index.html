@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Experience Installer</title>
+    <style>
+        body {
+            background-color: #010101;
+            color: #CAC4D0;
+            font-family: 'Google Sans';
+            font-weight: 500;
+            font-style: normal;
+            margin: 0;
+        }
+
+        button {
+            font-family: 'Google Sans';
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        #main {
+            background-color: #1C1B1F;
+            max-width: 425px;
+            min-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 100vh;
+        }
+
+        .pelogo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 8px;
+            margin-left: 32px;
+            margin-right: 32px;
+            max-width: 360px;
+        }
+
+        .mtybtn {
+            background-color: #D0BCFF;
+            border: none;
+            color: #381E72;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 50px;
+        }
+
+        .pay {
+            width: 32px;
+            height: 32px;
+            margin-right: 8px;
+            object-fit: scale-down;
+        }
+    </style>
+    <link href="stylesheet.css" rel="stylesheet">
+    <script>
+        function closeall() {
+            document.getElementById("mainactivity").style.display = "none";
+            document.getElementById("logoinactivity").style.display = "none";
+        }
+
+        function showact(screen) {
+            closeall();
+            document.getElementById(screen).style.display = "block";
+        }
+
+        function unsupportedpay() {
+            alert("ПОСОСИ");
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="mainactivity">
+            <br /><br />
+            <img src="pe.png" class="pelogo" /><br />
+            <h1 style="text-align: center;">Pixel Experince</h1>
+            <h3 style="text-align: center;">Installer</h3>
+            <div class="footer">
+                <button class="mtybtn" style="width: 100%;" onclick="showact('logoinactivity')">Get Started!</button>
+                <h5>При нажатии на эту кнопку, вы соглашаетесь на то, что вы согласны продаться арабам в секс рабство в
+                    абсолютно любое время.</h5>
+            </div>
+        </div>
+
+
+        <div id="logoinactivity">
+            <br />
+            <h5 style="margin: 16px;">Но прежде чем мы продолжим, вы должны будете ввести пару ненужныйх данных. Не
+                бойтесь, все данные мы
+                храним на своих серверах, к которым доступ есть только у нас и *пару наших партнёров, которые нам
+                задонатили через donation alerts! Кстати, если вы хотите стать нашим спонсором, переходите на donation
+                alerts по ссылке в описанни данного видео! :3</h5>
+            <input placeholder="Имя" /><input placeholder="Фамилия" /><br />
+            <input placeholder="Email" /><br />
+            <h3 style="text-align: center;">Выберите тип оплаты:</h3>
+            <div style="margin-left: auto; margin-right: auto; width:max-content;"><a
+                    href="https://yoomoney.ru/to/4100117907367514"> <img class="pay" src="mirpay.png" /></a> <a
+                    href="https://send.monobank.ua/jar/8G1fMyAYaK"><img class="pay" src="visa.png" /></a><a
+                    href="https://send.monobank.ua/jar/8G1fMyAYaK"><img class="pay" src="masterscam.png" /></a> <a
+                    href="javascript:unsupportedpay()"><img class="pay" src="alipay.png" /></a> <a
+                    href="javascript:unsupportedpay()"><img class="pay" src="unionpay.png" /></a> <a
+                    href="https://t.me/CryptoBot?start=IVLboYSMUc0M"><img class="pay" src="cryptobot.png" /></a> <a
+                    href="https://send.monobank.ua/jar/8G1fMyAYaK"><img class="pay" src="mono.png" /></a></div><br />
+                    <button class="mtybtn" style="width: calc(100% - 32px); margin-left: 16px; margin-right: 16px;" onclick="showact('logoinactivity')">Продолжить</button>
+        </div>
+    </div>
+
+    <script>
+         showact("mainactivity");
+        // showact("logoinactivity");
+    </script>
+</body>
+
+</html>
